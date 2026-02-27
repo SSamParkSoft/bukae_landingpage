@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* BUKAE 브랜드 teal */
+  --color-brand: #5e8790;
+  --color-brand-strong: #6f9ea8;
+}
+
+/* Hero 오버레이: 밝아졌다 어두워졌다 호흡 애니메이션 */
+@keyframes hero-overlay-pulse {
+  0%,
+  100% {
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0.32;
+  }
+}
+
+.hero-overlay-pulse {
+  animation: hero-overlay-pulse 4s ease-in-out infinite;
+}
+
+/* Hero 하단 스크롤 인디케이터 */
+@keyframes hero-scroll-indicator {
+  0%,
+  35%,
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  45%,
+  55% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-scroll-indicator {
+  animation: hero-scroll-indicator 2.4s ease-in-out infinite;
+}
