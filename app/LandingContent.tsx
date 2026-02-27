@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { FadeInWhenVisible } from "./components/FadeInWhenVisible";
 
 const workflow = [
   {
@@ -30,17 +27,13 @@ export default function LandingContent({
 }: {
   hasMeaningVideo: boolean;
 }) {
-  const [heroLoaded, setHeroLoaded] = useState(false);
-
   return (
     <main className="mx-auto max-w-[1440px] space-y-24 pb-28 lg:space-y-32 lg:pb-40">
       {/* Hero */}
-      <motion.section
+      <FadeInWhenVisible
+        as="section"
         className="mx-auto max-w-[1200px] px-4 pt-10 sm:px-6 sm:pt-6 lg:px-8 lg:pt-8"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.6 }}
+        amount={0.6}
       >
         <header className="flex w-full items-center justify-between">
           <a href="#" className="inline-flex items-center">
@@ -61,18 +54,19 @@ export default function LandingContent({
           </a>
         </header>
 
+        <h1 className="sr-only">
+          구조 기반 숏폼 자동화 워크플로 플랫폼 BUKAE(부캐)
+        </h1>
+
         <div className="mt-6 overflow-hidden rounded-2xl sm:mt-7">
           <div className="relative flex min-h-[200px] w-full justify-center sm:min-h-[280px] lg:min-h-[360px]">
             <Image
               src="/main-hero-demo.png"
-              alt="Bukae 워크플로 데모 화면"
+              alt="BUKAE(부캐) 화면"
               width={3840}
               height={2432}
               priority
-              className={`h-auto max-h-[80vh] w-full object-contain object-center transition-opacity duration-500 ${
-                heroLoaded ? "opacity-100" : "opacity-0"
-              }`}
-              onLoadingComplete={() => setHeroLoaded(true)}
+              className="h-auto max-h-[80vh] w-full object-contain object-center"
             />
             <div
               className="hero-overlay-pulse pointer-events-none absolute inset-0 bg-black"
@@ -80,15 +74,15 @@ export default function LandingContent({
             />
           </div>
         </div>
-      </motion.section>
+      </FadeInWhenVisible>
 
       {/* Hero → Problem scroll indicator */}
-      <motion.div
+      <FadeInWhenVisible
+        as="div"
         className="-mt-16 mb-16 flex justify-center sm:-mt-14 sm:mb-20"
-        initial={{ opacity: 0, y: 8 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        viewport={{ once: true, amount: 0.2 }}
+        initialY={8}
+        delay={0.1}
+        amount={0.2}
       >
         <a
           href="#problem"
@@ -97,18 +91,17 @@ export default function LandingContent({
         >
           ⌵
         </a>
-      </motion.div>
+      </FadeInWhenVisible>
 
       {/* Problem / Comparison */}
-      <motion.section
-        id="problem"
+      <FadeInWhenVisible
+        as="section"
         className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.35 }}
+        initialY={30}
+        amount={0.35}
+        duration={0.7}
       >
-        <div className="grid gap-1 text-left">
+        <div id="problem" className="grid gap-1 text-left">
           <p className="text-[0.78rem] font-bold tracking-[0.18em] text-brand">
             PROBLEM
           </p>
@@ -238,18 +231,17 @@ export default function LandingContent({
             <div className="mt-4 h-px w-full bg-gradient-to-r from-brand/60 via-brand/0 to-transparent" />
           </article>
         </div>
-      </motion.section>
+      </FadeInWhenVisible>
 
       {/* Workflow */}
-      <motion.section
-        id="workflow"
+      <FadeInWhenVisible
+        as="section"
         className="mx-auto flex max-w-[1200px] flex-col gap-6 px-4 sm:px-6 lg:px-8"
-        initial={{ opacity: 0, y: 32 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.35 }}
+        initialY={32}
+        amount={0.35}
+        duration={0.7}
       >
-        <div className="grid gap-1 text-left">
+        <div id="workflow" className="grid gap-1 text-left">
           <p className="text-[0.78rem] font-bold tracking-[0.18em] text-brand">
             WORKFLOW
           </p>
@@ -340,15 +332,15 @@ export default function LandingContent({
             </article>
           ))}
         </div>
-      </motion.section>
+      </FadeInWhenVisible>
 
       {/* Meaning / BG Video */}
-      <motion.section
+      <FadeInWhenVisible
+        as="section"
         className="relative left-1/2 w-screen -translate-x-1/2 min-h-[180px] overflow-hidden sm:min-h-[220px] lg:min-h-[280px] xl:min-h-[360px]"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
+        initialY={40}
+        amount={0.3}
+        duration={0.8}
       >
         {hasMeaningVideo ? (
           <video
@@ -380,18 +372,18 @@ export default function LandingContent({
             </p>
           </div>
         </div>
-      </motion.section>
+      </FadeInWhenVisible>
 
       {/* Pre-register CTA */}
-      <motion.section
-        id="pre-register"
+      <FadeInWhenVisible
+        as="section"
         className="mx-auto mt-16 w-full max-w-[1200px] px-4 text-center sm:mt-20 sm:px-6 lg:mt-24 lg:px-8"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.4 }}
+        amount={0.4}
       >
-        <p className="text-xs font-semibold tracking-[0.16em] text-brand sm:text-[0.78rem]">
+        <p
+          id="pre-register"
+          className="text-xs font-semibold tracking-[0.16em] text-brand sm:text-[0.78rem]"
+        >
           BETA PRE-REGISTER
         </p>
         <h2 className="mt-2 text-base font-medium tracking-[-0.02em] text-slate-50 sm:text-lg lg:text-2xl">
@@ -412,15 +404,13 @@ export default function LandingContent({
             사전등록하기
           </a>
         </div>
-      </motion.section>
+      </FadeInWhenVisible>
 
       {/* Footer */}
-      <motion.footer
+      <FadeInWhenVisible
+        as="footer"
         className="mx-auto mt-10 w-full max-w-[1200px] border-t border-white/10 px-4 pt-6 text-center text-xs text-slate-400 sm:px-6 sm:pt-7 sm:text-[0.8rem] lg:px-8 lg:pt-8"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.4 }}
+        amount={0.4}
       >
         <div className="space-y-2 sm:space-y-2.5">
           <p className="text-[0.8rem] text-slate-300/90 sm:text-[0.85rem]">
@@ -439,7 +429,7 @@ export default function LandingContent({
             © {new Date().getFullYear()} 쌈박한소프트. All rights reserved.
           </p>
         </div>
-      </motion.footer>
+      </FadeInWhenVisible>
     </main>
   );
 }
