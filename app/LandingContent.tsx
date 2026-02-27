@@ -60,14 +60,26 @@ export default function LandingContent({
 
         <div className="mt-6 overflow-hidden rounded-2xl sm:mt-7">
           <div className="relative flex min-h-[200px] w-full justify-center sm:min-h-[280px] lg:min-h-[360px]">
-            <Image
-              src="/main-hero-demo.png"
-              alt="BUKAE(부캐) 화면"
-              width={3840}
-              height={2432}
-              priority
-              className="h-auto max-h-[80vh] w-full object-contain object-center"
-            />
+            {hasMeaningVideo ? (
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/bg.mp4" type="video/mp4" />
+              </video>
+            ) : (
+              <Image
+                src="/main-hero-demo.png"
+                alt="BUKAE(부캐) 화면"
+                width={3840}
+                height={2432}
+                priority
+                className="h-auto max-h-[80vh] w-full object-contain object-center"
+              />
+            )}
             <div
               className="hero-overlay-pulse pointer-events-none absolute inset-0 bg-black"
               aria-hidden
@@ -222,7 +234,8 @@ export default function LandingContent({
                   </span>
                   <p>
                     <span className="block">편집 설계도에 맞춰 컷을 정리해,</span>
-                    <span className="block">10분 이내에 같은 구조의 버전을 여러 개 뽑아냅니다.</span>
+                    <span className="block lg:inline">10분 이내에 같은 구조의 버전을 </span>
+                    <span className="block lg:inline">여러 개 뽑아냅니다.</span>
                   </p>
                 </li>
               </ul>
