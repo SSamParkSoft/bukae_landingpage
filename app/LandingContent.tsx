@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const workflow = [
   {
@@ -29,6 +30,8 @@ export default function LandingContent({
 }: {
   hasMeaningVideo: boolean;
 }) {
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
   return (
     <main className="mx-auto max-w-[1440px] space-y-24 pb-28 lg:space-y-32 lg:pb-40">
       {/* Hero */}
@@ -66,7 +69,10 @@ export default function LandingContent({
               width={3840}
               height={2432}
               priority
-              className="h-auto max-h-[80vh] w-full object-contain object-center"
+              className={`h-auto max-h-[80vh] w-full object-contain object-center transition-opacity duration-500 ${
+                heroLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              onLoadingComplete={() => setHeroLoaded(true)}
             />
             <div
               className="hero-overlay-pulse pointer-events-none absolute inset-0 bg-black"
@@ -265,6 +271,7 @@ export default function LandingContent({
             loop
             muted
             playsInline
+            poster="/main-hero-demo.png"
           >
             <source src="/bg.mp4" type="video/mp4" />
           </video>
