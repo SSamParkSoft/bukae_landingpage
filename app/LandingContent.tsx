@@ -150,8 +150,13 @@ export default function LandingContent({
                     ✕
                   </span>
                   <p>
-                    <span className="block sm:inline">화려한 효과만 따라하다가 핵심 메시지가 </span>{" "}
-                    <span className="block sm:inline">빠져나가고, 브랜딩과 전환 모두 애매해집니다.</span>
+                    <span className="block lg:inline">
+                      화려한 효과만 따라하다가{" "}
+                    </span>
+                    <span className="block lg:inline">
+                      핵심 메시지가 빠져나가고,
+                    </span>
+                    <span className="block">브랜딩과 전환 모두 애매해집니다.</span>
                   </p>
                 </li>
                 <li className="flex gap-3">
@@ -159,10 +164,13 @@ export default function LandingContent({
                     ✕
                   </span>
                   <p>
-                    <span className="block sm:inline">
+                    <span className="block lg:inline">
                       촬영장에 가서도 무엇을 어떤 컷으로 담아야 할지
-                    </span>{" "}
-                    <span className="block sm:inline">애매해, 현장에서 계속 애드리브로 대응합니다.</span>
+                    </span>
+                    <span className="block">
+                      {" "}
+                      애매해 현장에서 계속 애드리브로 대응합니다.
+                    </span>
                   </p>
                 </li>
                 <li className="flex gap-3">
@@ -170,8 +178,8 @@ export default function LandingContent({
                     ✕
                   </span>
                   <p>
-                    <span className="block sm:inline">편집 단계에서 컷 타이밍을 감으로 잡다 보니,</span>{" "}
-                    <span className="block sm:inline">한 편 편집에 수 시간씩 소요됩니다.</span>
+                    <span className="block">편집 단계에서 컷 타이밍을 감으로 잡다 보니,</span>
+                    <span className="block">한 편 편집에 수 시간씩 소요됩니다.</span>
                   </p>
                 </li>
               </ul>
@@ -202,8 +210,8 @@ export default function LandingContent({
                     ✓
                   </span>
                   <p>
-                    <span className="block sm:inline">대본부터 타임라인까지, 후킹–전개–CTA가</span>{" "}
-                    <span className="block sm:inline">끊어지지 않도록 구조를 먼저 설계합니다.</span>
+                    <span className="block">대본부터 타임라인까지, 후킹–전개–CTA가</span>
+                    <span className="block">끊어지지 않도록 구조를 먼저 설계합니다.</span>
                   </p>
                 </li>
                 <li className="flex gap-3">
@@ -211,8 +219,8 @@ export default function LandingContent({
                     ✓
                   </span>
                   <p>
-                    <span className="block sm:inline">컷리스트에 맞춰 필요한 장면만 빠르게 촬영해,</span>{" "}
-                    <span className="block sm:inline">같은 콘셉트의 영상을 일괄 생산할 수 있습니다.</span>
+                    <span className="block">컷리스트에 맞춰 필요한 장면만 빠르게 촬영해,</span>
+                    <span className="block">같은 콘셉트의 영상을 일괄 생산할 수 있습니다.</span>
                   </p>
                 </li>
                 <li className="flex gap-3">
@@ -220,8 +228,8 @@ export default function LandingContent({
                     ✓
                   </span>
                   <p>
-                    <span className="block sm:inline">편집 설계도에 맞춰 컷을 정리해, 10분 이내에</span>{" "}
-                    <span className="block sm:inline">같은 구조의 버전을 여러 개 뽑아냅니다.</span>
+                    <span className="block">편집 설계도에 맞춰 컷을 정리해,</span>
+                    <span className="block">10분 이내에 같은 구조의 버전을 여러 개 뽑아냅니다.</span>
                   </p>
                 </li>
               </ul>
@@ -273,40 +281,54 @@ export default function LandingContent({
                 <p className="text-sm leading-relaxed text-[rgba(200,217,220,0.9)] sm:text-[0.95rem] lg:text-base">
                   {item.step === "01" && (
                     <>
-                      <span className="block sm:inline">
+                      <span className="block">
                         레퍼런스 URL을 입력하면,
                       </span>{" "}
-                      <span className="block sm:inline">
-                        AI가 영상을 분석해 어떤 후킹-전개-전환 구조가
+                      <span className="lg:inline">
+                        AI가 영상을 분석해
                       </span>{" "}
-                      <span className="block sm:inline">사용중인지 요약해 줍니다.</span>
+                      <span className="lg:inline">
+                        어떤 후킹-전개-전환 구조가
+                      </span>{" "}
+                      <span className="block">사용중인지 요약해 줍니다.</span>
                     </>
                   )}
                   {item.step === "02" && (
                     <>
-                      <span className="block sm:inline">
-                        검출된 패턴을 기반으로 브랜드 톤에 맞는
+                      <span className="block">
+                        검출된 패턴을 기반으로
                       </span>{" "}
-                      <span className="block sm:inline">
-                        스크립트와 씬 리스트를 자동으로 생성하고,
+                      <span className="lg:inline">
+                        브랜드 톤에 맞는
                       </span>{" "}
-                      <span className="block sm:inline">
+                      <span className="lg:inline">
+                        스크립트와 씬 리스트를
+                      </span>{" "}
+                      <span className="block">
+                        자동으로 생성하고,
+                      </span>{" "}
+                      <span className="lg:inline">
                         컷 단위로 어떤 미장센과 메시지가
                       </span>{" "}
-                      <span className="block sm:inline">
-                        들어가야 하는지 정리합니다.
+                      <span className="block">들어가야 하는지 정리합니다.
                       </span>
                     </>
                   )}
                   {item.step === "03" && (
                     <>
-                      <span className="block sm:inline">
-                        촬영 현장 체크리스트와 컷 편집 가이드를 제공해,
+                      <span className="block">
+                        촬영 현장 체크리스트와
                       </span>{" "}
-                      <span className="block sm:inline">
-                        누구나 같은 구조로 촬영·편집할 수 있고
+                      <span className="lg:inline">
+                        컷 편집 가이드를 제공해,
                       </span>{" "}
-                      <span className="block sm:inline">
+                      <span className="lg:inline">
+                        누구나 같은 구조로
+                      </span>{" "}
+                      <span className="block">
+                        촬영·편집할 수 있고,
+                      </span>{" "}
+                      <span className="block lg:inline">
                         결과물을 빠르게 A/B 테스트할 수 있습니다.
                       </span>
                     </>
