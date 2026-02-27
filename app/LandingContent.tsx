@@ -55,7 +55,7 @@ export default function LandingContent({
           </a>
           <a
             href="#pre-register"
-            className="hidden rounded-full border border-brand/60 bg-brand/15 px-4 py-1.5 text-[0.78rem] font-bold tracking-[0.12em] text-brand-strong shadow-[0_6px_14px_rgba(94,135,144,0.32)] hover:bg-brand-strong hover:text-slate-950 hover:shadow-[0_8px_18px_rgba(94,135,144,0.45)] sm:inline-flex"
+            className="inline-flex rounded-full border border-brand/60 bg-brand/15 px-3 py-1.5 text-[0.76rem] font-bold tracking-[0.12em] text-brand-strong shadow-[0_6px_14px_rgba(94,135,144,0.32)] hover:bg-brand-strong hover:text-slate-950 hover:shadow-[0_8px_18px_rgba(94,135,144,0.45)] sm:px-4 sm:text-[0.78rem]"
           >
             사전등록하기
           </a>
@@ -117,8 +117,13 @@ export default function LandingContent({
             <span className="block sm:inline">감으로 따라 하면 구조가 무너집니다</span>
           </h2>
           <p className="mt-3 max-w-[56rem] text-sm leading-relaxed text-slate-300/85 sm:text-[0.98rem] lg:text-base">
-            레퍼런스를 수백 번 봐도 후킹-전개-전환-CTA의 본질적인 구조를 파악하지 못하면, 영상은 루즈해지고
-            시청자는 3초 만에 이탈합니다.
+            <span className="block sm:inline">
+              레퍼런스를 수백 번 봐도
+            </span>{" "}
+            <span className="block sm:inline">
+            후킹-전개-CTA의 본질적인 구조를 파악하지 못하면, 
+            </span>{" "}
+            <span className="block sm:inline">영상은 루즈해지고 시청자는 3초 만에 이탈합니다.</span>
           </p>
         </div>
 
@@ -144,19 +149,30 @@ export default function LandingContent({
                   <span className="mt-1 inline-flex h-5 w-5 aspect-square flex-shrink-0 items-center justify-center rounded-full border border-red-400/70 text-[0.7rem] font-semibold text-red-200">
                     ✕
                   </span>
-                  <p>화려한 효과만 따라하다가 핵심 메시지가 빠져나가고, 브랜딩과 전환 모두 애매해집니다.</p>
+                  <p>
+                    <span className="block sm:inline">화려한 효과만 따라하다가 핵심 메시지가 </span>{" "}
+                    <span className="block sm:inline">빠져나가고, 브랜딩과 전환 모두 애매해집니다.</span>
+                  </p>
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 inline-flex h-5 w-5 aspect-square flex-shrink-0 items-center justify-center rounded-full border border-red-400/70 text-[0.7rem] font-semibold text-red-200">
                     ✕
                   </span>
-                  <p>촬영장에 가서도 무엇을 어떤 컷으로 담아야 할지 애매해, 현장에서 계속 애드리브로 대응합니다.</p>
+                  <p>
+                    <span className="block sm:inline">
+                      촬영장에 가서도 무엇을 어떤 컷으로 담아야 할지
+                    </span>{" "}
+                    <span className="block sm:inline">애매해, 현장에서 계속 애드리브로 대응합니다.</span>
+                  </p>
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 inline-flex h-5 w-5 aspect-square flex-shrink-0 items-center justify-center rounded-full border border-red-400/70 text-[0.7rem] font-semibold text-red-200">
                     ✕
                   </span>
-                  <p>편집 단계에서 컷 타이밍을 감으로 잡다 보니, 한 편 편집에 수 시간씩 소요됩니다.</p>
+                  <p>
+                    <span className="block sm:inline">편집 단계에서 컷 타이밍을 감으로 잡다 보니,</span>{" "}
+                    <span className="block sm:inline">한 편 편집에 수 시간씩 소요됩니다.</span>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -185,19 +201,28 @@ export default function LandingContent({
                   <span className="mt-1 inline-flex h-5 w-5 aspect-square flex-shrink-0 items-center justify-center rounded-full border border-brand/60 bg-brand/15 text-[0.7rem] font-semibold text-brand-strong">
                     ✓
                   </span>
-                  <p>대본부터 타임라인까지, 후킹–전개–전환–CTA가 끊어지지 않도록 구조를 먼저 설계합니다.</p>
+                  <p>
+                    <span className="block sm:inline">대본부터 타임라인까지, 후킹–전개–CTA가</span>{" "}
+                    <span className="block sm:inline">끊어지지 않도록 구조를 먼저 설계합니다.</span>
+                  </p>
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 inline-flex h-5 w-5 aspect-square flex-shrink-0 items-center justify-center rounded-full border border-brand/60 bg-brand/15 text-[0.7rem] font-semibold text-brand-strong">
                     ✓
                   </span>
-                  <p>컷리스트에 맞춰 필요한 장면만 빠르게 촬영해, 같은 콘셉트의 영상을 일괄 생산할 수 있습니다.</p>
+                  <p>
+                    <span className="block sm:inline">컷리스트에 맞춰 필요한 장면만 빠르게 촬영해,</span>{" "}
+                    <span className="block sm:inline">같은 콘셉트의 영상을 일괄 생산할 수 있습니다.</span>
+                  </p>
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 inline-flex h-5 w-5 aspect-square flex-shrink-0 items-center justify-center rounded-full border border-brand/60 bg-brand/15 text-[0.7rem] font-semibold text-brand-strong">
                     ✓
                   </span>
-                  <p>편집 설계도에 맞춰 컷을 기계적으로 정리해, 10분 이내에 같은 구조의 버전을 여러 개 뽑아냅니다.</p>
+                  <p>
+                    <span className="block sm:inline">편집 설계도에 맞춰 컷을 정리해, 10분 이내에</span>{" "}
+                    <span className="block sm:inline">같은 구조의 버전을 여러 개 뽑아냅니다.</span>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -246,7 +271,46 @@ export default function LandingContent({
                 </h3>
 
                 <p className="text-sm leading-relaxed text-[rgba(200,217,220,0.9)] sm:text-[0.95rem] lg:text-base">
-                  {item.detail}
+                  {item.step === "01" && (
+                    <>
+                      <span className="block sm:inline">
+                        레퍼런스 URL을 입력하면,
+                      </span>{" "}
+                      <span className="block sm:inline">
+                        AI가 영상을 분석해 어떤 후킹-전개-전환 구조가
+                      </span>{" "}
+                      <span className="block sm:inline">사용중인지 요약해 줍니다.</span>
+                    </>
+                  )}
+                  {item.step === "02" && (
+                    <>
+                      <span className="block sm:inline">
+                        검출된 패턴을 기반으로 브랜드 톤에 맞는
+                      </span>{" "}
+                      <span className="block sm:inline">
+                        스크립트와 씬 리스트를 자동으로 생성하고,
+                      </span>{" "}
+                      <span className="block sm:inline">
+                        컷 단위로 어떤 미장센과 메시지가
+                      </span>{" "}
+                      <span className="block sm:inline">
+                        들어가야 하는지 정리합니다.
+                      </span>
+                    </>
+                  )}
+                  {item.step === "03" && (
+                    <>
+                      <span className="block sm:inline">
+                        촬영 현장 체크리스트와 컷 편집 가이드를 제공해,
+                      </span>{" "}
+                      <span className="block sm:inline">
+                        누구나 같은 구조로 촬영·편집할 수 있고
+                      </span>{" "}
+                      <span className="block sm:inline">
+                        결과물을 빠르게 A/B 테스트할 수 있습니다.
+                      </span>
+                    </>
+                  )}
                 </p>
               </div>
 
@@ -313,7 +377,9 @@ export default function LandingContent({
           <span className="block sm:inline">가장 먼저 경험해 보세요.</span>
         </h2>
         <p className="mx-auto mt-3 max-w-[40rem] text-xs leading-relaxed text-slate-300/85 sm:text-sm sm:max-w-[34rem] lg:text-[0.95rem]">
-          <span className="block sm:inline">간단한 팀/프로덕트 정보를 남겨 주시면,</span>{" "}
+          <span className="block sm:inline">
+            <span className="font-semibold text-brand">성함과 연락처</span>
+            를 남겨 주시면,</span>{" "}
           <span className="block sm:inline">베타 오픈 소식과 함께 혜택을 안내드립니다.</span>
         </p>
         <div className="mt-5 flex flex-col items-center gap-3 sm:mt-6 sm:flex-row sm:justify-center sm:gap-4">
