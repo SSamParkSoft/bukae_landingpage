@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FadeInWhenVisible } from "./components/FadeInWhenVisible";
+import { PreRegisterCTA } from "./components/PreRegisterCTA";
 
 const workflow = [
   {
@@ -397,12 +398,7 @@ export default function LandingContent({
           <span className="block sm:inline">베타 오픈 소식과 함께 혜택을 안내드립니다.</span>
         </p>
         <div className="mt-5 flex flex-col items-center gap-3 sm:mt-6 sm:flex-row sm:justify-center sm:gap-4">
-          <a
-            href="mailto:ssamso8282@gmail.com?subject=BUKAE%20베타%20사전등록&body=팀명/업종과 현재 숏폼 운영 상황을 간단히 적어 주세요."
-            className="inline-flex w-full max-w-xs items-center justify-center rounded-full bg-brand px-6 py-2.5 text-sm font-bold tracking-[0.12em] text-slate-950 hover:bg-brand-strong sm:w-auto sm:max-w-none sm:px-7"
-          >
-            사전등록하기
-          </a>
+          <PreRegisterCTA />
         </div>
       </FadeInWhenVisible>
 
